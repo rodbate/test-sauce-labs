@@ -1,0 +1,27 @@
+language: java
+
+jdk:
+    - oraclejdk8
+
+# Only ci these branches
+branches:
+    only:
+        - master
+
+services:
+    - redis-server
+
+cache:
+    directories:
+        - $HOME/.gradle
+
+before_install:
+    - git submodule update --init --recursive
+
+before_script:
+    - mysql -e 'CREATE DATABASE briair CHARACTER SET = utf8;'
+    - gradle -Pflyway.url=jdbc:mysql://127.0.0.1:3306/briair flywayMigrate -Pflyway.user=travis
+
+script:
+    - gradle javadoc
+    - gradle check -Dspring.profiles.active=travis

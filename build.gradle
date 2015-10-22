@@ -1,7 +1,17 @@
-/*group 'test-sauce-labs'
-version '1.0-SNAPSHOT'*/
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.2.+")
+        classpath 'org.flywaydb:flyway-gradle-plugin:3.2.+'
+    }
+}
 
 apply plugin: 'java'
+apply plugin: 'spring-boot'
+apply plugin: 'idea'
+apply plugin: 'org.flywaydb.flyway'
 
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
@@ -16,6 +26,14 @@ jar {
 }
 
 dependencies {
+    compile("org.springframework.boot:spring-boot-starter-web:1.2+")
+    compile("commons-lang:commons-lang:2.6")
+    compile("org.springframework.boot:spring-boot-starter-data-jpa:1.2.+")
+    runtime("mysql:mysql-connector-java:5.1.+")
+    testCompile("org.springframework.boot:spring-boot-starter-test:1.2+")
+    testCompile("httpunit:httpunit:1.7")
+    testCompile("javax.servlet:servlet-api:2.4")
+    testCompile("com.jayway.jsonpath:json-path:2.0+")
 
 }
 
