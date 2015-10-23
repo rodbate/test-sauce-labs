@@ -10,6 +10,7 @@ branches:
 
 services:
     - redis-server
+    - mysql
 
 cache:
     directories:
@@ -17,10 +18,9 @@ cache:
 
 before_install:
     - git submodule update --init --recursive
-    - mysql -e "create database IF NOT EXISTS rodbate;" -u travis
 
 before_script:
-    - mysql -e 'CREATE DATABASE IF NOT EXISTS rodbate CHARACTER SET = utf8;'
+    - mysql -e 'CREATE DATABASE rodbate CHARACTER SET = utf8;'
     - gradle -Pflyway.url=jdbc:mysql://127.0.0.1:3306/rodbate flywayMigrate -Pflyway.user=travis
 
 script:
