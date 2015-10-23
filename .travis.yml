@@ -18,5 +18,4 @@ before_script:
     - mysql -e 'CREATE DATABASE rodbate CHARACTER SET = utf8;'
     - gradle flywayMigrate -Pflyway.url=jdbc:mysql://127.0.0.1:3306/rodbate -Pflyway.user=travis -Pflyway.password=
 
-script:
-    - gradle test
+
