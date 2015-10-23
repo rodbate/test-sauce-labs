@@ -19,4 +19,4 @@ before_script:
     - gradle flywayMigrate -Pflyway.url=jdbc:mysql://127.0.0.1:3306/rodbate -Pflyway.user=travis -Pflyway.password=
 
 script:
-    - gradle check
+    - gradle test
