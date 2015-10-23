@@ -22,4 +22,4 @@ script:
     - gradle check -Dspring.profiles.active=travis
 
 
-    
+
