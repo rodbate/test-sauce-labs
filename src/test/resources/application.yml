@@ -11,7 +11,6 @@ logging:
 
 # Spring settings
 spring:
-    profiles.active: dev
     datasource:
         url: jdbc:mysql://127.0.0.1:3306/test?characterEncoding=utf8
         username: javapp
