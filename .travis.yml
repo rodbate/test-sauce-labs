@@ -19,8 +19,8 @@ before_install:
     - git submodule update --init --recursive
 
 before_script:
-    - mysql -e 'CREATE DATABASE test CHARACTER SET = utf8;'
-    - gradle -Pflyway.url=jdbc:mysql://127.0.0.1:3306/test flywayMigrate
+    - mysql -e 'CREATE DATABASE rodbate CHARACTER SET = utf8;'
+    - gradle -Pflyway.url=jdbc:mysql://127.0.0.1:3306/rodbate flywayMigrate -Pflyway.username=travis
 
 script:
     - gradle javadoc
