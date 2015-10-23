@@ -20,7 +20,7 @@ before_install:
 
 before_script:
     - mysql -e 'CREATE DATABASE test CHARACTER SET = utf8;'
-    - gradle -Pflyway.url=jdbc:mysql://127.0.0.1:3306/test flywayMigrate -Pflyway.user=travis -Pflyway.password=123456
+    - gradle -Pflyway.url=jdbc:mysql://127.0.0.1:3306/test flywayMigrate -Pflyway.user=travis flywayMigrate -Pflyway.password=123456
 
 script:
     - gradle javadoc
