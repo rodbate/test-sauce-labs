@@ -24,4 +24,4 @@ before_script:
 
 script:
     - gradle javadoc
-    - gradle check -Dspring.profiles.active=travis
+    - gradle check -Dspring.profiles.active=default,mysql run
