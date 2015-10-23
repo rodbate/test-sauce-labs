@@ -58,5 +58,7 @@ public class UserControllerTest {
                 .andReturn();
 
         _log.info("result : "+result.getResponse().getContentAsString());
+
+        
     }
 }
