@@ -1,6 +1,7 @@
 package com.test.controller;
 
 import com.test.Application;
+import com.test.repository.UserRepository;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -32,6 +33,8 @@ public class UserControllerTest {
     private UserController userController;
     @Autowired
     private WebApplicationContext wac;
+    @Autowired
+    private UserRepository userRepository;
 
     private MockMvc mockMvc;
 
@@ -53,7 +56,7 @@ public class UserControllerTest {
                 .andExpect(status().isOk())
                 .andReturn();
 
-        //_log.info("result : "+result.getResponse().getContentAsString());
+        _log.info("result : "+result.getResponse().getContentAsString());
 
 
     }
