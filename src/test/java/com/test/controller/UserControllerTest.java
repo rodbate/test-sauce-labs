@@ -1,4 +1,4 @@
-/*package com.test.controller;
+package com.test.controller;
 
 import com.test.Application;
 import org.junit.Before;
@@ -21,10 +21,6 @@ import javax.transaction.Transactional;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
-
-*//**
- * Created by rodbate on 2015/10/23.
- *//*
 
 
 @RunWith(SpringJUnit4ClassRunner.class)
@@ -61,4 +57,4 @@ public class UserControllerTest {
 
 
     }
-}*/
+}
