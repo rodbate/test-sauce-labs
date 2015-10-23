@@ -53,7 +53,7 @@ public class UserControllerTest {
                 .andExpect(status().isOk())
                 .andReturn();
 
-        _log.info("result : "+result.getResponse().getContentAsString());
+        //_log.info("result : "+result.getResponse().getContentAsString());
 
 
     }
