@@ -59,6 +59,6 @@ public class UserControllerTest {
 
         _log.info("result : "+result.getResponse().getContentAsString());
 
-        
+
     }
 }
