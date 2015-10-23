@@ -10,14 +10,13 @@ branches:
 
 services:
     - redis-server
-    - mysql
+    - mysql-server
 
 cache:
     directories:
         - $HOME/.gradle
 
-before_install:
-    - git submodule update --init --recursive
+
 
 before_script:
     - mysql -e 'CREATE DATABASE rodbate CHARACTER SET = utf8;'
