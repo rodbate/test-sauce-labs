@@ -3,6 +3,6 @@ spring:
     datasource:
         url: jdbc:mysql://127.0.0.1:3306/test?characterEncoding=utf8
         username: travis
-        password:
+        password: YES
     redis:
         host: 127.0.0.1
