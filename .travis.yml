@@ -40,5 +40,7 @@ script:
     - npm install karma --save-dev
     - karma start karma.conf-ci.js
 
+    
+
 
 
