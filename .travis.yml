@@ -36,6 +36,7 @@ before_script:
 
 script:
     - gradle check -Dspring.profiles.active=travis
+    - karma start karma.conf-ci.js
 
 
 
