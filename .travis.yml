@@ -3,6 +3,9 @@ language: java
 jdk:
     - oraclejdk8
 
+node_js:
+- '0.11'
+
 # Only ci these branches
 branches:
     only:
@@ -26,6 +29,7 @@ cache:
 before_script:
     - mysql -e 'CREATE DATABASE rodbate CHARACTER SET = utf8;'
     - gradle flywayMigrate -Pflyway.url=jdbc:mysql://127.0.0.1:3306/rodbate -Pflyway.user=travis -Pflyway.password=
+    - npm install -g karma-cli
 
 script:
     - gradle check -Dspring.profiles.active=travis
