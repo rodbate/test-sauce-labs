@@ -27,7 +27,7 @@ cache:
         - $HOME/.gradle
 
 before_install:
-    -npm install -g npm
+    - npm install -g npm
 
 before_script:
     - mysql -e 'CREATE DATABASE rodbate CHARACTER SET = utf8;'
