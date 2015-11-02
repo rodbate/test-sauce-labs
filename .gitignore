@@ -3,3 +3,7 @@
 *.iml
 *.log
 build/
+
+node_modules
+
+sauce.json

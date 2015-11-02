@@ -1,6 +1,9 @@
-/*package com.test.controller;
+/*
+
+package com.test.controller;
 
 import com.test.Application;
+import com.test.repository.UserRepository;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -22,10 +25,6 @@ import javax.transaction.Transactional;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
-*//**
- * Created by rodbate on 2015/10/23.
- *//*
-
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @WebAppConfiguration
@@ -36,6 +35,8 @@ public class UserControllerTest {
     private UserController userController;
     @Autowired
     private WebApplicationContext wac;
+    @Autowired
+    private UserRepository userRepository;
 
     private MockMvc mockMvc;
 
@@ -61,4 +62,6 @@ public class UserControllerTest {
 
 
     }
-}*/
+}
+
+*/
